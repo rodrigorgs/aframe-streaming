@@ -1,0 +1,6 @@
+node_modules/
+*.log
+*.env
+cert.key
+cert.csr
+cert.crt

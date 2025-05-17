@@ -66,5 +66,15 @@
         tela.setAttribute('theta-length', thetaLength);
       });
     </script>
+
+    <script>
+      const socket = new WebSocket(`wss://${location.host}`);
+      socket.addEventListener("message", (event) => {
+        const data = JSON.parse(event.data);
+        if (data.type === "reload") {
+          location.reload();
+        }
+      });
+    </script>
   </body>
 </html>
